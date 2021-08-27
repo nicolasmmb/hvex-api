@@ -1,6 +1,6 @@
 
 
-# :scroll: Documentação da API da HVEX
+# :scroll: Documentação da API da HVEX :scroll:
 
 ### **Para que a API execute sem erros, é *ESTRITAMENTE NECESSÁRIO* seguir os passos decritos a seguir**.
 ---
@@ -23,17 +23,9 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 - [node.js](https://nodejs.org/en/) - JavaScript runtime
 - [Git](https://github.com/) - GitHub para controle de versões e Integração com o Heroku.
 
-  
-
 ----
 ----
-
-  
-
 # :rotating_light: Passos :rotating_light:
-
-  
-
 >## Passo 1:
 >### Instalações
 >
@@ -45,23 +37,50 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 >>> 3. Instale o [Docker](https://www.docker.com/products/docker-desktop) : **Será utilizado para Iniciar um Container contendo o MongoDB.**
 > >> 4. Instale o [Git](https://git-scm.com/downloads) : **Necessário para o controle de versão e integrações
 com o Heroku, além de agilizar o processo de Deploy.**
+
  >## Passo 2:
 >### Visual Studio Code
 > :pushpin: Será necessário instalar algumas extenções no VS Code para nos auxiliar no processo de Execussão da API.
->> 1.  Instale o plugin do [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) e ative-o. Acesse o link no navegador caso o Link anterior não funcione. 
-Link: ***vscode:extension/ms-azuretools.vscode-docker*** e aceite o redirecionamento para o VS Code.
->> 2. Instale o plugin do [ThundeClient](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) e ative-o. Acesse o link no navegador caso o Link anterior não funcione. 
-Link: ***vscode:extension/rangav.vscode-thunder-client*** e aceite o redirecionamento para o VS Code.
- >## Passo 3:
+>> 1. Use o seguinte comando no console para verificar se o VS Code está instalado.
+>>```shell 
+>> code --version
+>>```
+>> O retorno do console deverá ser algo parecido com a seguinte exemplo:
+>> ```shell
+>> 1.59.1
+>>3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
+>>x64
+>>```
+>> 2.  Instale o plugin do [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) e ative-o. Acesse o link no navegador caso o Link anterior não funcione. 
+Link: ***vscode:extension/ms-azuretools.vscode-docker*** 
+e aceite o redirecionamento para o VS Code.
+>> 3. Instale o plugin do [ThundeClient](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) e ative-o. Acesse o link no navegador caso o Link anterior não funcione. 
+Link: ***vscode:extension/rangav.vscode-thunder-client***
+e aceite o redirecionamento para o VS Code.
+
+>## Passo 3:
 >### Docker
 > :pushpin: Verifique se o Docker está executando correntamente. Caso contrário ocorrerá um erro na execussão da API.
+> - Use o seguinte comando no console para verificar se o Docker está instalado.
+>```shell 
+> docker --version
+>```
+> - O retorno do console deverá ser algo parecido com a seguinte exemplo:
+> ```shell
+> Docker version 20.10.8, build 3967b7d
+> ```
 
-
-
-
-
-  
-
+>## Passo 4:
+>### Git
+> :pushpin: Verifique se o Git está executando correntamente. Caso contrário ocorrerá um erro no momento PULL.
+> - Use o seguinte comando no console para verificar se o Git está instalado.
+>```shell 
+>git --version
+>```
+> - O retorno do console deverá ser algo parecido com a seguinte exemplo:
+> ```shell
+> git version 2.30.1.windows.1
+> ````
 ----
 ----
 
@@ -69,6 +88,10 @@ Link: ***vscode:extension/rangav.vscode-thunder-client*** e aceite o redireciona
 
 # Rotas da API:
 
+> ## Rota da Documentação da API:
+> #### <img  src="https://img.shields.io/badge/-HTTP%20-gray"/>&nbsp; http://localhost:3000/documentation
+> <img  src="https://img.shields.io/badge/-Documentation%20-yellow"/>&nbsp;
+>> *Essa rota tem como função de documentar as funcionalidades e realizar testes.*
 > ## Rota de Verificação de Login:
 > #### <img  src="https://img.shields.io/badge/-POST%20-blue"/>&nbsp; http://localhost:3000/user/verify-login
 > <img  src="https://img.shields.io/badge/-Parameters%20-yellow"/>&nbsp;
