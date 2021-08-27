@@ -5,9 +5,9 @@ const express = require('express');
 const env = require('../src/config/env')
 const cors = require('cors');
 const app = express();
-//require('dotenv').config();
-console.log(env.environment.mongoDB.devConnection);
 
+
+// Connect to MongoDB
 mongoose.connect(env.environment.mongoDB.devConnection,
     {
         useNewUrlParser: true,
@@ -25,7 +25,7 @@ mongoose.connect(env.environment.mongoDB.devConnection,
         app.emit('error-on-mongo');
     });
 
-
+// App Config
 app.use(express.json());
 app.use(routes);
 app.use((req, res, next) => {
@@ -35,17 +35,18 @@ app.use((req, res, next) => {
     next();
 });
 
+// Swagger
 app.use("/documentation",
     swaggerUI.serve,
     swaggerUI.setup(require('../src/config/swagger.json')));
 
+// Start server
 app.on('connected-on-mongo', () => {
-
     app.listen(env.environment.server.port, (res, req) => {
         console.log('===========================================');
         console.log('=    Access in: http://localhost:'.concat(env.environment.server.port), '   =')
         console.log('=          Press Ctrl+C to quit.          =');
         console.log('===========================================');
     });
-})
+});
 
