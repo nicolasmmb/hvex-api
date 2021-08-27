@@ -12,7 +12,11 @@
     "servers": [
         {
             "url": "http://localhost:3000/",
-            "description": "Local Server For Tests"
+            "description": "Local Server For HVEX API Tests"
+        },
+        {
+            "url": "https://hvex-api.herokuapp.com/",
+            "description": "Heroku Server For HVEX API"
         }
     ],
     "paths": {

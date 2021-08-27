@@ -6,13 +6,19 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 
 ----
 
+
 ## Tecnologias
-- Documentação da API com Swagger.
-- Integração com  MongoDB.
-- Variaveis de Ambiente para configuração da API, pronta para Deploy em diversos Ambientes de Desenvolvimento.
-- Utilização de Arquitetura MVC, sendo possivel adaptavel para outra se houver necessidades.
-- Preparado para Deploy no Heroku.
-  
+Ferramentas e Frameworks Utilizados:
+- [VS Code](https://code.visualstudio.com/download) - IDE Utilizada.
+- [Express](https://expressjs.com/pt-br/) - Framework web para o desenvolvimento da API.
+- [MongoDB](https://www.mongodb.com/pt-br) - Banco de dados Não Relacional.
+- [Heroku](https://dashboard.heroku.com/) - Heroku utilizado para o Deploy
+- [node.js](https://nodejs.org/en/) -  JavaScript runtime
+- [Git](https://github.com/) - GitHub para controle de versões e Integração com o Heroku.
+
+----
+## ToDo
+- Descrições
 ----
 
 # Rotas da API: 
@@ -48,26 +54,16 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 >> *Essa rota Deleta todos os dados do usuarios.*
 
 ----
+## Instalação
 
-#
-## Tech
+- Para utilizar a API será necessário a instalação de alguns **Softwares** :computer::
 
-Dillinger uses a number of open source projects to work properly:
+   - Os links estarão em "[Azul]()", como nessa demonstração, eles irão lhe redirecionar para as páginas dos Softwares que deverão ser instalados.
+   - Siga os passos a Seguir para a instalação dos recursos necessários para Executar a API:
+   >> 1. Instale  [VS Code](https://code.visualstudio.com/download).
+   >> 2. Instale o [Node.JS](https://nodejs.org/en/)
+   >> 3. instale o [MongoDB]()
 
-- [VS Code](https://code.visualstudio.com/download) - IDE.
-- [node.js](https://nodejs.org/en/) -  JavaScript runtime
-- [Express](https://expressjs.com/pt-br/) - Framework web rápido, flexível.
-- [MongoDB](https://www.mongodb.com/pt-br) - NoSQL Database
-- [Heroku](https://dashboard.heroku.com/) - 
-- [Git](https://github.com/) - 
-
-
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
-
-## Installation
-
-Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
 
 Install the dependencies and devDependencies and start the server.
 
@@ -83,6 +79,62 @@ For production environments...
 npm install --production
 NODE_ENV=production node app
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Plugins
 
