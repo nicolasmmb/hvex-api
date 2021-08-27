@@ -5,7 +5,7 @@ const express = require('express');
 const env = require('../src/config/env')
 const cors = require('cors');
 const app = express();
-require('dotenv').config();
+//require('dotenv').config();
 
 
 mongoose.connect(env.environment.mongoDB.devConnection,
