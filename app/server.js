@@ -2,6 +2,7 @@ const swaggerUI = require('swagger-ui-express');
 const routes = require('../src/router/routes');
 const mongoose = require('mongoose');
 const express = require('express');
+const env = require('../src/config/env')
 const cors = require('cors');
 const app = express();
 require('dotenv').config();
@@ -39,10 +40,9 @@ app.use("/documentation",
 
 app.on('connected-on-mongo', () => {
 
-    app.listen(3000, (res, req) => {
+    app.listen(env.environment.server.port, (res, req) => {
         console.log('===========================================');
-        console.log('=    Access in: http://localhost:3000     =')
-        console.log('=       Server running on port 3000       =');
+        console.log('=    Access in: http://localhost:'.concat(env.environment.server.port), '    =')
         console.log('=          Press Ctrl+C to quit.          =');
         console.log('===========================================');
     });
