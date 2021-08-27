@@ -8,12 +8,13 @@ const app = express();
 require('dotenv').config();
 
 
-mongoose.connect(process.env.MONGO_URI,
+mongoose.connect(env.environment.mongoDB.devConnection,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
     .then(() => {
+        console.log(env.environment.mongoDB.devConnection);
         console.log('===========================================');
         console.log('=            MongoDB Connected            =');
         console.log('===========================================');
