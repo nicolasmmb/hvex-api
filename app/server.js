@@ -6,7 +6,7 @@ const env = require('../src/config/env')
 const cors = require('cors');
 const app = express();
 //require('dotenv').config();
-
+console.log(env.environment.mongoDB.devConnection);
 
 mongoose.connect(env.environment.mongoDB.devConnection,
     {
@@ -14,7 +14,7 @@ mongoose.connect(env.environment.mongoDB.devConnection,
         useUnifiedTopology: true
     })
     .then(() => {
-        console.log(env.environment.mongoDB.devConnection);
+
         console.log('===========================================');
         console.log('=            MongoDB Connected            =');
         console.log('===========================================');
