@@ -1,0 +1,329 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API",
+        "version": "1.0.0",
+        "contact": {
+            "name": "Nicolas Marques de Moura Barbosa",
+            "email": "nicolas.mmb@hotmail.com",
+            "url": "https://github.com/nicolasmmb"
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000/",
+            "description": "Local Server For Tests"
+        }
+    ],
+    "paths": {
+        "/user/create": {
+            "post": {
+                "summary": "Create a new user",
+                "tags": [
+                    "USER"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/user-create"
+                            },
+                            "examples": {
+                                "user-create": {
+                                    "value": {
+                                        "name": "Admin User",
+                                        "username": "admin",
+                                        "password": "1234"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful Operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/user/verify-login": {
+            "post": {
+                "summary": "Check the user's Login and update the 'Last Access Date' if password and username are correct",
+                "tags": [
+                    "USER"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/user-verify-login"
+                            },
+                            "examples": {
+                                "user-verify-login": {
+                                    "value": {
+                                        "username": "admin",
+                                        "password": "1234"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/user/read-all": {
+            "get": {
+                "summary": "Read all users",
+                "tags": [
+                    "USER"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/user/read/{id}": {
+            "get": {
+                "summary": "Read a user by ID",
+                "tags": [
+                    "USER"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User's ID",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/user/update/{id}": {
+            "patch": {
+                "summary": "Update a user by ID",
+                "description": "",
+                "tags": [
+                    "USER"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User's ID",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/user-update"
+                            },
+                            "examples": {
+                                "user-update": {
+                                    "value": {
+                                        "name": "User ADMIN",
+                                        "username": "user.admin",
+                                        "password": "4321"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/user/delete/{id}": {
+            "delete": {
+                "summary": "Delete a user by ID",
+                "tags": [
+                    "USER"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "User's ID",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/user/delet-all": {
+            "delete": {
+                "summary": "Delete all users",
+                "tags": [
+                    "USER"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "user-verify-login": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "description": "The user's username",
+                        "example": "user.name"
+                    },
+                    "password": {
+                        "type": "string",
+                        "description": "The user's password",
+                        "example": "123456"
+                    }
+                }
+            },
+            "user-create": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The user's username",
+                        "example": "USER NAME"
+                    },
+                    "username": {
+                        "type": "string",
+                        "description": "The user's username",
+                        "example": "user.name"
+                    },
+                    "password": {
+                        "type": "string",
+                        "description": "The user's password",
+                        "example": "123456"
+                    }
+                }
+            },
+            "user-update": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The user's username",
+                        "example": "USER NAME"
+                    },
+                    "username": {
+                        "type": "string",
+                        "description": "The user's username",
+                        "example": "user.name"
+                    },
+                    "password": {
+                        "type": "string",
+                        "description": "The user's password",
+                        "example": "123456"
+                    }
+                }
+            }
+        }
+    }
+}

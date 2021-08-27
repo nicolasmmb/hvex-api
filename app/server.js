@@ -1,12 +1,9 @@
-const swaggerUi = require('swagger-ui-express');
-const bodyParser = require('body-parser');
+const swaggerUI = require('swagger-ui-express');
+const routes = require('../src/router/routes');
 const mongoose = require('mongoose');
 const express = require('express');
-const routes = require('./routes');
 const cors = require('cors');
 const app = express();
-
-
 require('dotenv').config();
 
 
@@ -36,9 +33,12 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use("/documentation",
+    swaggerUI.serve,
+    swaggerUI.setup(require('../src/config/swagger.json')));
 
 app.on('connected-on-mongo', () => {
-    app.use('/docs', swaggerUi.serve, swaggerUi.setup(require('../settings/swagger.json')));
+
     app.listen(3000, (res, req) => {
         console.log('===========================================');
         console.log('=    Access in: http://localhost:3000     =')

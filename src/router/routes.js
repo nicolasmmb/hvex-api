@@ -1,4 +1,4 @@
-const usersController = require('../src/controllers/usersController');
+const usersController = require('../controllers/usersController');
 const express = require('express');
 const route = express.Router();
 
@@ -10,7 +10,9 @@ route.get('/user/read-all', usersController.readAllUsers);
 route.get('/user/read/:id', usersController.readUserById);
 route.patch('/user/update/:id', usersController.updateUserById);
 route.delete('/user/delete/:id', usersController.deleteUserById);
+route.delete('/user/delete-all', usersController.deleteAllUsers);
 // Fim das Rotas Referentes ao Usuário //
+
 
 
 //Exports Routes

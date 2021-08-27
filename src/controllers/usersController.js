@@ -9,16 +9,16 @@ exports.readUserById = async (req, res, next) => {
         res.status(200);
         data = {
             message: 'User read successfully',
-            readData: [data]
+            readData: [data],
         }
-        res.send(data);
+        res.json(data);
     }).catch(err => {
         res.status(401);
         err = {
             ErrorMessage: 'User not read',
             ErrorLog: err
         }
-        res.send(err);
+        res.json(err);
     });
 }
 
@@ -34,14 +34,14 @@ exports.readAllUsers = async (req, res, next) => {
             message: 'Users read successfully',
             UsersList: [data]
         }
-        res.send(data);
+        res.json(data);
     }).catch(err => {
         res.status(401);
         err = {
             ErrorMessage: 'Users not read',
             ErrorLog: err
         }
-        res.send(err);
+        res.json(err);
     });
 }
 
@@ -62,14 +62,14 @@ exports.updateUserById = async (req, res, next) => {
                 message: 'User updated successfully',
                 readData: [data]
             }
-            res.send(data);
+            res.json(data);
         }).catch(err => {
             res.status(401);
             err = {
                 ErrorMessage: 'User not read',
                 ErrorLog: err
             }
-            res.send(err);
+            res.json(err);
         });
     }).catch(err => {
         res.status(401);
@@ -77,7 +77,7 @@ exports.updateUserById = async (req, res, next) => {
             ErrorMessage: 'User not updated',
             ErrorLog: err
         }
-        res.send(err);
+        res.json(err);
     });
 }
 
@@ -91,14 +91,35 @@ exports.deleteUserById = async (req, res, next) => {
             deletedData: [data]
         }
         res.status(200);
-        res.send(data);
+        res.json(data);
     }).catch(err => {
         res.status(401);
         err = {
             ErrorMessage: 'User not deleted',
             ErrorLog: err
         }
-        res.send(err);
+        res.json(err);
+    });
+}
+
+
+// Delete All Users
+exports.deleteAllUsers = async (req, res, next) => {
+    UserModel.deleteMany().then(data => {
+        data.__v = undefined;
+        data = {
+            message: 'All Users deleted successfully',
+            deletedData: [data]
+        }
+        res.status(200);
+        res.json(data);
+    }).catch(err => {
+        res.status(401);
+        err = {
+            ErrorMessage: 'All Users not deleted',
+            ErrorLog: err
+        }
+        res.json(err);
     });
 }
 
@@ -112,7 +133,7 @@ exports.verifyExistsUserAndCreate = async (req, res, next) => {
             data = {
                 message: 'The user already exists',
             }
-            res.send(data);
+            res.json(data);
         } else {
             const salt = bcryptjs.genSaltSync(5);
             const passwordHashed = bcryptjs.hashSync(req.body.password, salt);
@@ -128,14 +149,14 @@ exports.verifyExistsUserAndCreate = async (req, res, next) => {
                     message: 'User created successfully',
                     createdData: [data]
                 }
-                res.send(data);
+                res.json(data);
             }).catch(err => {
                 res.status(401);
                 err = {
                     ErrorMessage: 'User not created',
                     ErrorLog: err
                 }
-                res.send(err);
+                res.json(err);
             });
         }
     }).catch(err => {
@@ -144,7 +165,7 @@ exports.verifyExistsUserAndCreate = async (req, res, next) => {
             ErrorMessage: 'User not created',
             ErrorLog: err
         }
-        res.send(err);
+        res.json(err);
     });
 
 }
@@ -170,28 +191,28 @@ exports.verifyLoginAndUpdateAccessDate = async (req, res, next) => {
                         message: 'Login successful',
                         loginData: [data]
                     }
-                    res.send(data);
+                    res.json(data);
                 }).catch(err => {
                     res.status(401);
                     err = {
                         ErrorMessage: 'Login failed',
                         ErrorLog: err
                     }
-                    res.send(err);
+                    res.json(err);
                 });
             } else {
                 res.status(401);
                 data = {
                     message: 'Login failed, check your username and password',
                 }
-                res.send(data);
+                res.json(data);
             }
         } else {
             res.status(401);
             data = {
                 message: 'Login failed',
             }
-            res.send(data);
+            res.json(data);
         }
     }).catch(err => {
         res.status(500);
@@ -199,6 +220,6 @@ exports.verifyLoginAndUpdateAccessDate = async (req, res, next) => {
             ErrorMessage: 'Login failed',
             ErrorLog: err
         }
-        res.send(err);
+        res.json(err);
     });
 }
