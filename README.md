@@ -80,6 +80,37 @@ e aceite o redirecionamento para o VS Code.
 > - O retorno do console deverá ser algo parecido com a seguinte exemplo:
 > ```shell
 > git version 2.30.1.windows.1
+> ```
+> 
+> - Faça login com sua conta do Git se for solicitado utilizando os sequintes comandos:
+> ```shell
+> git config --global user.name "UserNameGenerico"
+> git config --global user.email "seu_email_do_git@example.com"
+> ```
+
+
+>## Passo 5:
+>### Clonado o Projeto
+> :pushpin: Agora será necessário Clonar o Projeto do Git.
+> - A Branch que será clonada é uma específica que será pausada quando o Desafio solicitado pelo RH for enviado.
+>```shell 
+>git --version
+>```
+> - O retorno do console deverá ser algo parecido com a seguinte exemplo:
+> ```shell
+> git version 2.30.1.windows.1
+> ````
+
+>## Passo 6:
+>### Preparando o Container com MongoDB  
+> :pushpin: Verifique se o Git está executando correntamente. Caso contrário ocorrerá um erro no momento PULL.
+> - Use o seguinte comando no console para verificar se o Git está instalado.
+>```shell 
+>git --version
+>```
+> - O retorno do console deverá ser algo parecido com a seguinte exemplo:
+> ```shell
+> git version 2.30.1.windows.1
 > ````
 ----
 ----
