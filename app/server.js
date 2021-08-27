@@ -43,7 +43,7 @@ app.on('connected-on-mongo', () => {
 
     app.listen(env.environment.server.port, (res, req) => {
         console.log('===========================================');
-        console.log('=    Access in: http://localhost:'.concat(env.environment.server.port), '    =')
+        console.log('=    Access in: http://localhost:'.concat(env.environment.server.port), '   =')
         console.log('=          Press Ctrl+C to quit.          =');
         console.log('===========================================');
     });
