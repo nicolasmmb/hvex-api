@@ -2,7 +2,7 @@ const UserModel = require('../models/usersModels');
 const bcryptjs = require('bcryptjs');
 
 
-
+// Read User By Id
 exports.readUserById = async (req, res, next) => {
     UserModel.findById(req.params.id).then(data => {
         data.__v = undefined;
@@ -22,6 +22,8 @@ exports.readUserById = async (req, res, next) => {
     });
 }
 
+
+// Read All Users
 exports.readAllUsers = async (req, res, next) => {
     UserModel.find().then(data => {
         res.status(200);
@@ -43,21 +45,32 @@ exports.readAllUsers = async (req, res, next) => {
     });
 }
 
+
+// Update User By Id
 exports.updateUserById = async (req, res, next) => {
-    UserModel.findOneAndReplace(req.params.id, {
+    UserModel.findByIdAndUpdate(req.params.id, {
         $set: {
             name: req.body.name,
             username: req.body.username,
             password: req.body.password,
         }
-    }).then(data => {
-        data.__v = undefined;
-        res.status(200);
-        data = {
-            message: 'User updated successfully',
-            updatedData: [data]
-        }
-        res.send(data);
+    }).then(() => {
+        UserModel.findById(req.params.id).then(data => {
+            data.__v = undefined;
+            res.status(200);
+            data = {
+                message: 'User updated successfully',
+                readData: [data]
+            }
+            res.send(data);
+        }).catch(err => {
+            res.status(401);
+            err = {
+                ErrorMessage: 'User not read',
+                ErrorLog: err
+            }
+            res.send(err);
+        });
     }).catch(err => {
         res.status(401);
         err = {
@@ -68,7 +81,9 @@ exports.updateUserById = async (req, res, next) => {
     });
 }
 
-exports.deleteUser = async (req, res, next) => {
+
+// Delete User By Id
+exports.deleteUserById = async (req, res, next) => {
     UserModel.findByIdAndDelete(req.params.id).then(data => {
         data.__v = undefined;
         data = {
@@ -87,7 +102,9 @@ exports.deleteUser = async (req, res, next) => {
     });
 }
 
-exports.verifyExistingUserAndCreate = async (req, res, next) => {
+
+// Verify if User Exists and Create if not exists
+exports.verifyExistsUserAndCreate = async (req, res, next) => {
     UserModel.findOne({
         username: req.body.username
     }).then(data => {
@@ -132,6 +149,8 @@ exports.verifyExistingUserAndCreate = async (req, res, next) => {
 
 }
 
+
+// Verify the Login Exists and Update Last Access Date "lastAccessDateISO8601" if exists
 exports.verifyLoginAndUpdateAccessDate = async (req, res, next) => {
     await UserModel.findOne({
         username: req.body.username
