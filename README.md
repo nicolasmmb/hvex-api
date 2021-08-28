@@ -51,7 +51,7 @@ com o Heroku, além de agilizar o processo de Deploy.**
 >>3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
 >>x64
 >>```
->> 2.  Instale o plugin do [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) e ative-o. Acesse o link no navegador caso o Link anterior não funcione. 
+>> 2. Instale o plugin do [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) e ative-o. Acesse o link no navegador caso o Link anterior não funcione. 
 Link: ***vscode:extension/ms-azuretools.vscode-docker*** 
 e aceite o redirecionamento para o VS Code.
 >> 3. Instale o plugin do [ThundeClient](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) e ative-o. Acesse o link no navegador caso o Link anterior não funcione. 
@@ -125,15 +125,15 @@ e aceite o redirecionamento para o VS Code.
 > - 1. A localização do arquivo para configuração do Container é:
 >**.\src\config\docker-compose.yml**
 > - 2. Acesse barra lateral no projeto:
-> ![1](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1.png)
+> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1.png)
 > - 3. Navege até o Diretório mencionado no item **'1'** desse tópico:
-> ![2](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-2.png)
+> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-2.png)
 > - 4. Selecione o arquivo **'docker-compose.yml'** e com o botão direto do mouse selecione e espere aparecer o menu com as opções do arquivo:
-> ![3](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-3.png)
+> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-3.png)
 > - 5. Procure a opção **'Compose Up'** no menu do arquivo. A mensagem a seguir monstra o menu e o Compose Up que deve ser iniciado
-> ![4](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-4.png)
+> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-4.png)
 > - 6. Esse item do tópico exemplifica todo o procedimento a ser sequido
-> ![5](https://github.com/nicolasmmb/saved-images/raw/main/hvex/markdown-passo-a-passo-low.gif)
+> ![](https://github.com/nicolasmmb/saved-images/raw/main/hvex/markdown-passo-a-passo-low.gif)
 > - 7. Espere a execução da configuração
 > - 8. Ao fim da instalação execute o comando no console para verificar se o container está sendo executado.
 > 
