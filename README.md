@@ -9,7 +9,6 @@
 ## :round_pushpin: Introdução
 
 Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma Empresa como a HVEX, é necessario que todo o **TIME de DESENVOLVIMENTO** tenha noção do como Funciona a API e todos os Processos e Requistos estejam Documentados tanto para possiveis Auditorias quanto para o própio entendimento do **TIME**, para que enfrente menos desafios durante o desenvolvimento.
-
 ----
 ----
 ## :mag_right: Tecnologias
@@ -144,7 +143,7 @@ e aceite o redirecionamento para o VS Code.
 >  >8. Ao fim da instalação execute o comando no console para verificar se o container está sendo executado.
 > 
 > ```shell
->  ps -q -f status=running -f name=mongodb_container
+>  docker ps -q -f status=running -f name=mongodb_container
 > ```
 > - O retorno deve ser a indentificação do Container, algo semelhante a isso:
 > ```shell
