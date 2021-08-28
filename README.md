@@ -123,12 +123,19 @@ e aceite o redirecionamento para o VS Code.
 ### Criando o Container com o Docker
 > :pushpin: É necessário ter a extenção do [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) instalada no VS Code.
 >  1. A localização do arquivo para configuração do Container é: **.\src\config\docker-compose.yml**
+> 
 >  2. Acesse barra lateral no projeto: ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1.png)
+> 
 >  3. Navege até o Diretório mencionado no item **'1'** desse tópico: ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-2.png)
+> 
 >  4. Selecione o arquivo **'docker-compose.yml'** e com o botão direto do mouse selecione e espere aparecer o menu com as opções do arquivo: ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-3.png)
+> 
 >  5. Procure a opção **'Compose Up'** no menu do arquivo. A mensagem a seguir monstra o menu e o Compose Up que deve ser iniciado ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-4.png)
-> - 6. Esse item do tópico exemplifica todo o procedimento a ser sequido ![](https://github.com/nicolasmmb/saved-images/raw/main/hvex/markdown-passo-a-passo-low.gif)
+> 
+>  6. Esse item do tópico exemplifica todo o procedimento a ser sequido ![](https://github.com/nicolasmmb/saved-images/raw/main/hvex/markdown-passo-a-passo-low.gif)
+> 
 >  7. Espere a execução da configuração
+> 
 >  8. Ao fim da instalação execute o comando no console para verificar se o container está sendo executado.
 > 
 > ```shell
