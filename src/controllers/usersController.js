@@ -189,7 +189,9 @@ exports.verifyLoginAndUpdateAccessDate = async (req, res, next) => {
                     res.status(200);
                     data = {
                         message: 'Login successful',
-                        loginData: [data]
+                        loginData: [data],
+                        observation: 'The date of the last access is now has been updated, but the return in the current JSON shows the last access and not the current access, if you make a new attempt it will show the date of the previous attempt.'
+
                     }
                     res.json(data);
                 }).catch(err => {

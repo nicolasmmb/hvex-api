@@ -72,7 +72,7 @@ e aceite o redirecionamento para o VS Code.
 
 ## Passo 4:
 ### Git
-> :pushpin: Verifique se o Git está executando correntamente. Caso contrário ocorrerá um erro no momento PULL.
+> :pushpin: Verifique se o Git está executando corretamente. Caso contrário ocorrerá um erro no momento do PULL.
 > - Use o seguinte comando no console para verificar se o Git está instalado.
 >```shell 
 >git --version
@@ -94,12 +94,11 @@ e aceite o redirecionamento para o VS Code.
 > :pushpin: Agora será necessário Clonar o Projeto do Git.
 > - Acesse um Diretório, esse diretório será usado futuramente.
 > - Abra o console nesse diretório acessado.
-> - A Branch que será clonada é uma específica que será pausada quando o Desafio solicitado pelo RH for enviado.
->  - Use o seguinte codigo para clonar o projeto:
+> - Copie o código abaixo, cole no console e execute:
 >```shell 
 >git clone -b Branch-RH-Final https://github.com/nicolasmmb/hvex-api.git
 >```
-> - O retorno do console deverá ser algo parecido com a seguinte exemplo:
+> - O retorno do console deverá ser algo semelhante com a seguinte exemplo:
 > ```shell
 > Cloning into 'hvex-api'...
 > remote: Enumerating objects: 124, done.
@@ -109,14 +108,18 @@ e aceite o redirecionamento para o VS Code.
 > Receiving objects: 100% (124/124), 161.21 KiB | 4.03 MiB/> s, done.
 > Resolving deltas: 100% (45/45), done.
 > ```
+>  - **Obs:** A Branch que será clonada é uma específica que será pausada quando o desafio solicitado pelo RH for enviado.
 
 ## Passo 6:
 ### Acessando o Projeto
-> :pushpin: Localize o diretorio clonado e Execute o seguinte comando no console.
+> :pushpin:  
+> - Localize o diretorio clonado anteriormente.
+> - No console aberto com o caminho de execução referente ao diretório clonado. Exemplo no Windows: ***C:\Users\username\Desktop\hvex-api***
+> - Copie e cole o comando abaixo e execute:
 >```shell 
 >code .
 >```
-> - Logo em seguida deverá abrir uma janela do VS Code com a pasta do projeto carregado. A imagem a seguir mostra como a tela deve ser estar.
+> - Logo em seguida deverá abrir uma janela do VS Code com a pasta do projeto carregado. A imagem a seguir mostra como a tela deverá estar.
 > ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-0.png)
 
 ## Passo 7:
@@ -133,15 +136,15 @@ e aceite o redirecionamento para o VS Code.
 >  4. Selecione o arquivo **'docker-compose.yml'** e com o botão direto do mouse selecione e espere aparecer o menu com as opções do arquivo: 
 > >![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-3.png)
 > 
->  5. Procure a opção **'Compose Up'** no menu do arquivo. A mensagem a seguir monstra o menu e o Compose Up que deve ser iniciado 
+>  5. Procure a opção **'Compose Up'** no menu do arquivo. A imagem a seguir monstra o menu e o Compose Up que deve ser selecionado. 
 > >![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-4.png)
 > 
->  6. Esse item do tópico exemplifica todo o procedimento a ser sequido 
+>  6. Esse item do tópico exemplifica todo o procedimento a ser seguido. 
 > >![](https://github.com/nicolasmmb/saved-images/raw/main/hvex/markdown-passo-a-passo-low.gif)
 > 
 > > 7. Espere a execução da configuração
 > 
->  >8. Ao fim da instalação execute o comando no console para verificar se o container está sendo executado.
+>  >8. Ao fim da instalação copie e cole o comando a baixo no console para verificar se o container está sendo executado.
 > 
 > ```shell
 >  docker ps -q -f status=running -f name=mongodb_container

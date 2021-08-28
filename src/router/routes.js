@@ -1,9 +1,11 @@
 const usersController = require('../controllers/usersController');
+const indexController = require('../controllers/indexController');
 const express = require('express');
 const route = express.Router();
 
 
 // Rotas Referentes ao Usuário //
+route.get('/', indexController.indexRedirect);
 route.post('/user/verify-login', usersController.verifyLoginAndUpdateAccessDate);
 route.post('/user/create', usersController.verifyExistsUserAndCreate);
 route.get('/user/read-all', usersController.readAllUsers);
