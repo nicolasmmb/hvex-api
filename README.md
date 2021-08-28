@@ -26,8 +26,8 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 ----
 ----
 # :rotating_light: Passos :rotating_light:
->## Passo 1:
->### Instalações
+## Passo 1:
+### Instalações
 >
 >:pushpin: Para utilizar a API será necessário a instalação de alguns **Softwares** :computer::
 >>:round_pushpin: Os links estarão em "[Azul]()", como nessa demonstração. Eles irão lhe redirecionar para as páginas dos Softwares que deverão ser instalados.
@@ -38,8 +38,8 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 > >> 4. Instale o [Git](https://git-scm.com/downloads) : **Necessário para o controle de versão e integrações
 com o Heroku, além de agilizar o processo de Deploy.**
 
- >## Passo 2:
->### Visual Studio Code
+## Passo 2:
+### Visual Studio Code
 > :pushpin: Será necessário instalar algumas extenções no VS Code para nos auxiliar no processo de Execussão da API.
 >> 1. Use o seguinte comando no console para verificar se o VS Code está instalado.
 >>```shell 
@@ -58,8 +58,8 @@ e aceite o redirecionamento para o VS Code.
 Link: ***vscode:extension/rangav.vscode-thunder-client***
 e aceite o redirecionamento para o VS Code.
 
->## Passo 3:
->### Docker
+## Passo 3:
+### Docker
 > :pushpin: Verifique se o Docker está executando correntamente. Caso contrário ocorrerá um erro na execussão da API.
 > - Use o seguinte comando no console para verificar se o Docker está instalado.
 >```shell 
@@ -70,8 +70,8 @@ e aceite o redirecionamento para o VS Code.
 > Docker version 20.10.8, build 3967b7d
 > ```
 
->## Passo 4:
->### Git
+## Passo 4:
+### Git
 > :pushpin: Verifique se o Git está executando correntamente. Caso contrário ocorrerá um erro no momento PULL.
 > - Use o seguinte comando no console para verificar se o Git está instalado.
 >```shell 
@@ -89,62 +89,96 @@ e aceite o redirecionamento para o VS Code.
 > ```
 
 
->## Passo 5:
->### Clonado o Projeto
+## Passo 5:
+### Clonado o Projeto
 > :pushpin: Agora será necessário Clonar o Projeto do Git.
+> - Acesse um Diretório, esse diretório será usado futuramente.
+> - Abra o console nesse diretório acessado.
 > - A Branch que será clonada é uma específica que será pausada quando o Desafio solicitado pelo RH for enviado.
+>  - Use o seguinte codigo para clonar o projeto:
 >```shell 
->git --version
+>git clone -b Branch-RH-Final https://github.com/nicolasmmb/hvex-api.git
 >```
 > - O retorno do console deverá ser algo parecido com a seguinte exemplo:
 > ```shell
-> git version 2.30.1.windows.1
-> ````
+> Cloning into 'hvex-api'...
+> remote: Enumerating objects: 124, done.
+> remote: Counting objects: 100% (124/124), done.
+> remote: Compressing objects: 100% (79/79), done.
+> remote: Total 124 (delta 45), reused 102 (delta 30), > pack-reused 0
+> Receiving objects: 100% (124/124), 161.21 KiB | 4.03 MiB/> s, done.
+> Resolving deltas: 100% (45/45), done.
+> ```
 
->## Passo 6:
->### Preparando o Container com MongoDB  
-> :pushpin: Verifique se o Git está executando correntamente. Caso contrário ocorrerá um erro no momento PULL.
-> - Use o seguinte comando no console para verificar se o Git está instalado.
+## Passo 6:
+### Acessando o Projeto
+> :pushpin: Localize o diretorio clonado e Execute o seguinte comando no console.
 >```shell 
->git --version
+>code .
 >```
-> - O retorno do console deverá ser algo parecido com a seguinte exemplo:
+> - Logo em seguida deverá abrir uma janela do VS Code com a pasta do projeto carregado. A imagem a seguir mostra como a tela deve ser estar.
+![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-0.png)
+
+## Passo 7:
+### Criando o Container com o Docker
+> :pushpin: É necessário ter a extenção do [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) instalada no VS Code.
+> - 1. A localização do arquivo para configuração do Container é:
+>**.\src\config\docker-compose.yml**
+> - 2. Acesse barra lateral no projeto:
+> ![1](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1.png)
+> - 3. Navege até o Diretório mencionado no item **'1'** desse tópico:
+> ![2](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-2.png)
+> - 4. Selecione o arquivo **'docker-compose.yml'** e com o botão direto do mouse selecione e espere aparecer o menu com as opções do arquivo:
+> ![3](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-3.png)
+> - 5. Procure a opção **'Compose Up'** no menu do arquivo. A mensagem a seguir monstra o menu e o Compose Up que deve ser iniciado
+> ![4](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-4.png)
+> - 6. Esse item do tópico exemplifica todo o procedimento a ser sequido
+> ![5](https://github.com/nicolasmmb/saved-images/raw/main/hvex/markdown-passo-a-passo-low.gif)
+> - 7. Espere a execução da configuração
+> - 8. Ao fim da instalação execute o comando no console para verificar se o container está sendo executado.
+> 
 > ```shell
-> git version 2.30.1.windows.1
-> ````
+>  ps -q -f status=running -f name=mongodb_container
+> ```
+> - O retorno deve ser a indentificação do Container, algo semelhante a isso:
+> ```shell
+> 8d3b06893655
+> ```
+
+
+
 ----
 ----
 
   
 
 # Rotas da API:
-
-> ## Rota da Documentação da API:
+## Rota da Documentação da API:
 > #### <img  src="https://img.shields.io/badge/-HTTP%20-gray"/>&nbsp; http://localhost:3000/documentation
 > <img  src="https://img.shields.io/badge/-Documentation%20-yellow"/>&nbsp;
 >> *Essa rota tem como função de documentar as funcionalidades e realizar testes.*
-> ## Rota de Verificação de Login:
+## Rota de Verificação de Login:
 > #### <img  src="https://img.shields.io/badge/-POST%20-blue"/>&nbsp; http://localhost:3000/user/verify-login
 > <img  src="https://img.shields.io/badge/-Parameters%20-yellow"/>&nbsp;
 >> *Essa rota tem como função a verificação do Login do Usuario. Se as credencias de Login forem aceitas, essa rota atualiza o campo "lastAccessDateISO8601", esse campo é atualizado no formato **ISO8601**.*
-> ## Rota de Criação de Login:
+## Rota de Criação de Login:
 > #### <img  src="https://img.shields.io/badge/-POST%20-blue"/>&nbsp; http://localhost:3000/user/create
 > <img  src="https://img.shields.io/badge/-Parameters%20-yellow"/>&nbsp;
 >> *Essa rota recebe parâmetros para que seja realizada uma chegagem prévia para verificar para que não haja usuários duplicados.*
-> ## Rota de Leitura de todos os Logins:
+## Rota de Leitura de todos os Logins:
 > #### <img  src="https://img.shields.io/badge/-GET%20-green"/>&nbsp; http://localhost:3000/user/read-all
 >> *Essa rota retornar todos os usuarios cadastrados no Sistemas.*
-> ## Rota de Leitura de um Login por ID:
+## Rota de Leitura de um Login por ID:
 > #### <img  src="https://img.shields.io/badge/-GET%20-green"/>&nbsp; http://localhost:3000/user/read/:id
 >> *Essa rota retorna os dados do usuario solicitado através do 'id'.*
-> ## Rota de Atualização de um Login por ID:
+## Rota de Atualização de um Login por ID:
 > #### <img  src="https://img.shields.io/badge/-PATCH%20-orange"/>&nbsp; http://localhost:3000/user/update/:id
 > <img  src="https://img.shields.io/badge/-Parameters%20-yellow"/>&nbsp;
 >> *Essa rota Atualiza os dados do usuario solicitado através do 'id', e o parâmetro passado para a rota, será atualizado.*
-> ## Rota de Deleta um Login por ID:
+## Rota de Deleta um Login por ID:
 > #### <img  src="https://img.shields.io/badge/-DELETE%20-red"/>&nbsp; http://localhost:3000/user/delete/:id
 >> *Essa rota Deleta os dados do usuario solicitado através do 'id'.*
-> ## Rota de Deleta um Login por ID:
+## Rota de Deleta um Login por ID:
 > #### <img  src="https://img.shields.io/badge/-DELETE%20-red"/>&nbsp; http://localhost:3000/user/delete-all
 >> *Essa rota Deleta todos os dados do usuarios.*
 ----

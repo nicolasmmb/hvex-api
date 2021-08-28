@@ -248,7 +248,7 @@
                 }
             }
         },
-        "/user/delet-all": {
+        "/user/delete-all": {
             "delete": {
                 "summary": "Delete all users",
                 "tags": [
