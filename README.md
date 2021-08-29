@@ -17,11 +17,19 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 :round_pushpin: Ferramentas e Frameworks Utilizados:
 
 - [VS Code](https://code.visualstudio.com/download) - IDE Utilizada.
-- [Express](https://expressjs.com/pt-br/) - Framework web para o desenvolvimento da API.
-- [MongoDB](https://www.mongodb.com/pt-br) - Banco de dados Não Relacional.
-- [Heroku](https://dashboard.heroku.com/) - Heroku utilizado para o Deploy
-- [node.js](https://nodejs.org/en/) - JavaScript runtime
-- [Git](https://github.com/) - GitHub para controle de versões e Integração com o Heroku.
+- [Express](https://expressjs.com/pt-br/) - Framework web para o desenvolvimento da API. 
+- [MongoDB](https://www.mongodb.com/pt-br) - Banco de dados Não Relacional. 
+- [node.js](https://nodejs.org/en/) - JavaScript runtime. 
+- [Git](https://github.com/) - GitHub para controle de versões.
+- [Docker](https://www.docker.com/) - plataforma de virtualização de nível de sistema operacional.
+<p align="center">
+<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VSCode"/>&nbsp;&nbsp; 
+<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express"/>&nbsp;&nbsp; 
+<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB"/>&nbsp;&nbsp;
+<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="NodeJS"/>&nbsp;&nbsp;
+<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"/>&nbsp;&nbsp;
+<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker"/>&nbsp;&nbsp;
+</p>
 
 ----
 ----
@@ -35,8 +43,7 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 >>> 1. Instale o [VS Code](https://code.visualstudio.com/download): **A IDE que será utilizada para o desenvolvimento e Execusão do Container contendo o MongoDB.**
 >>> 2. Instale o [Node.JS](https://nodejs.org/en/): **Necessário para o Desenvolvimento da API.**
 >>> 3. Instale o [Docker](https://www.docker.com/products/docker-desktop) : **Será utilizado para Iniciar um Container contendo o MongoDB.**
-> >> 4. Instale o [Git](https://git-scm.com/downloads) : **Necessário para o controle de versão e integrações
-com o Heroku, além de agilizar o processo de Deploy.**
+> >> 4. Instale o [Git](https://git-scm.com/downloads) : **Necessário para o controle de versão e integrações e versionamento, além de agilizar o processo de Deploy.**
 > - **Obs:** Os procedimentos foram executados em um ambiente **Windows**, caso haja necessidade de execução em outro Sistema Operacional, poderá ocorrer incompatibilidades nos processos descritos.
 
 ## Passo 2:
