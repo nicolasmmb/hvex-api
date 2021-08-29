@@ -37,10 +37,12 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 >>> 3. Instale o [Docker](https://www.docker.com/products/docker-desktop) : **Será utilizado para Iniciar um Container contendo o MongoDB.**
 > >> 4. Instale o [Git](https://git-scm.com/downloads) : **Necessário para o controle de versão e integrações
 com o Heroku, além de agilizar o processo de Deploy.**
+> - **Obs:** Os procedimentos foram executados em um ambiente **Windows**, caso haja necessidade de execução em outro Sistema Operacional, poderá ocorrer incompatibilidades nos processos descritos.
 
 ## Passo 2:
 ### Visual Studio Code
 > :pushpin: Será necessário instalar algumas extenções no VS Code para nos auxiliar no processo de Execussão da API.
+> > ---
 >> 1. Use o seguinte comando no console para verificar se o VS Code está instalado.
 >>```shell 
 >> code --version
@@ -51,12 +53,13 @@ com o Heroku, além de agilizar o processo de Deploy.**
 >>3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
 >>x64
 >>```
+> > ---
 >> 2. Instale o plugin do [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) e ative-o. Acesse o link no navegador caso o Link anterior não funcione. 
-Link: ***vscode:extension/ms-azuretools.vscode-docker*** 
-e aceite o redirecionamento para o VS Code.
+Link: ***vscode:extension/ms-azuretools.vscode-docker*** ,  e aceite o redirecionamento para o VS Code.
+> > ---
 >> 3. Instale o plugin do [ThundeClient](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) e ative-o. Acesse o link no navegador caso o Link anterior não funcione. 
-Link: ***vscode:extension/rangav.vscode-thunder-client***
-e aceite o redirecionamento para o VS Code.
+Link: ***vscode:extension/rangav.vscode-thunder-client*** ,  e aceite o redirecionamento para o VS Code.
+> ---
 
 ## Passo 3:
 ### Docker
@@ -108,11 +111,13 @@ e aceite o redirecionamento para o VS Code.
 > Receiving objects: 100% (124/124), 161.21 KiB | 4.03 MiB/> s, done.
 > Resolving deltas: 100% (45/45), done.
 > ```
+> - **Obs:** O retorno do console poderá variar de acordo com sua máquina
 >  - **Obs:** A Branch que será clonada é uma específica que será pausada quando o desafio solicitado pelo RH for enviado.
+> 
 
 ## Passo 6:
 ### Acessando o Projeto
-> :pushpin:  
+> :pushpin: Certifique os passos anteriores fom executados corretamente.
 > - Localize o diretorio clonado anteriormente.
 > - No console aberto com o caminho de execução referente ao diretório clonado. Exemplo no Windows: ***C:\Users\username\Desktop\hvex-api***
 > - Copie e cole o comando abaixo e execute:
@@ -126,24 +131,24 @@ e aceite o redirecionamento para o VS Code.
 ### Criando o Container com o Docker
 > :pushpin: É necessário ter a extenção do [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) instalada no VS Code.
 >  1. A localização do arquivo para configuração do Container é: **.\src\config\docker-compose.yml**
-> 
+>  ---
 >  2. Acesse barra lateral no projeto: 
 > >![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1.png)
-> 
+> ---
 >  3. Navege até o Diretório mencionado no item **'1'** desse tópico: 
 > >![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-2.png)
-> 
+> ---
 >  4. Selecione o arquivo **'docker-compose.yml'** e com o botão direto do mouse selecione e espere aparecer o menu com as opções do arquivo: 
 > >![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-3.png)
-> 
+> ---
 >  5. Procure a opção **'Compose Up'** no menu do arquivo. A imagem a seguir monstra o menu e o Compose Up que deve ser selecionado. 
 > >![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-4.png)
-> 
+> ---
 >  6. Esse item do tópico exemplifica todo o procedimento a ser seguido. 
 > >![](https://github.com/nicolasmmb/saved-images/raw/main/hvex/markdown-passo-a-passo-low.gif)
-> 
+> ---
 > > 7. Espere a execução da configuração
-> 
+> ---
 >  >8. Ao fim da instalação copie e cole o comando a baixo no console para verificar se o container está sendo executado.
 > 
 > ```shell
@@ -153,6 +158,45 @@ e aceite o redirecionamento para o VS Code.
 > ```shell
 > 8d3b06893655
 > ```
+> - **Obs:** O retorno do console poderá variar de acordo com sua máquina
+> ---
+## Passo 8:
+### Iniciando a API 
+> :pushpin: Siga os passos a seguir para iniciar a API.
+>> 1. Abra o projeto com o VS Code
+>> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1-0.png)
+> ---
+>> 2. Inicie o Terminal do VS Code.O atalho padrão para abrir o console é: **Crtl + '**, ou acesse na barra superior a opção **'Terminal'** e logo em seguida **'New Terminal'/'Novo Terminal'**.
+>>![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1-1.png)
+>> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1-2.png)
+> ---
+>> 3. Copie e cole o comando a baixo no console para começar a baixar os modulos do NodeJS:
+>```shell
+> npm install
+>```
+>> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1-3.png)
+>> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1-4.png)
+> ---
+>> 4. Copie e cole o comando a baixo no console para iniciar a API:
+>```shell
+> npm start
+>```
+>> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1-5.png)
+>> ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1-6.png) 
+> ---
+
+## Passo 9:
+### Testes da API
+> :pushpin: Para realizar os testes nas rotas, acesse o endereço fornecido no terminal.
+>>  ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1-7.png) 
+> 1. Os testes podem ser realizados direto na documentação da API já que foi utilizado o Swagger
+>>  ![](https://raw.githubusercontent.com/nicolasmmb/saved-images/main/hvex/passo-1-8.png) 
+> ---
+## Passo 10:
+### Finalizando
+> :pushpin: Se todos os passos anteriores foram seguidos corretamente, a API deve estar em execução nesse momento.
+>> - O tópico [Rotas da API](#/Rotas-da-API) lhe dará uma breve descrição do que cada rota e o metodo que deve ser utilizado para realizar as consultas.
+
 ----
 ----
 
@@ -160,6 +204,7 @@ e aceite o redirecionamento para o VS Code.
 
 # Rotas da API:
 ## Rota da Documentação da API:
+
 > #### <img  src="https://img.shields.io/badge/-HTTP%20-gray"/>&nbsp; http://localhost:3000/documentation
 > <img  src="https://img.shields.io/badge/-Documentation%20-yellow"/>&nbsp;
 >> *Essa rota tem como função de documentar as funcionalidades e realizar testes.*
