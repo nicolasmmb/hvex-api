@@ -9,7 +9,7 @@ exports.readUserById = async (req, res, next) => {
         res.status(200);
         data = {
             message: 'User read successfully',
-            readData: [data],
+            readData: data,
         }
         res.json(data);
     }).catch(err => {
@@ -32,7 +32,7 @@ exports.readAllUsers = async (req, res, next) => {
         });
         data = {
             message: 'Users read successfully',
-            UsersList: [data]
+            UsersList: data
         }
         res.json(data);
     }).catch(err => {
@@ -60,7 +60,7 @@ exports.updateUserById = async (req, res, next) => {
             res.status(200);
             data = {
                 message: 'User updated successfully',
-                readData: [data]
+                readData: data
             }
             res.json(data);
         }).catch(err => {
@@ -88,7 +88,7 @@ exports.deleteUserById = async (req, res, next) => {
         data.__v = undefined;
         data = {
             message: 'User deleted successfully',
-            deletedData: [data]
+            deletedData: data
         }
         res.status(200);
         res.json(data);
@@ -109,7 +109,7 @@ exports.deleteAllUsers = async (req, res, next) => {
         data.__v = undefined;
         data = {
             message: 'All Users deleted successfully',
-            deletedData: [data]
+            deletedData: data
         }
         res.status(200);
         res.json(data);
@@ -147,7 +147,7 @@ exports.verifyExistsUserAndCreate = async (req, res, next) => {
                 res.status(201);
                 data = {
                     message: 'User created successfully',
-                    createdData: [data]
+                    createdData: data
                 }
                 res.json(data);
             }).catch(err => {
@@ -189,7 +189,7 @@ exports.verifyLoginAndUpdateAccessDate = async (req, res, next) => {
                     res.status(200);
                     data = {
                         message: 'Login successful',
-                        loginData: [data],
+                        loginData: data,
                         observation: 'The date of the last access is now has been updated, but the return in the current JSON shows the last access and not the current access, if you make a new attempt it will show the date of the previous attempt.'
 
                     }
