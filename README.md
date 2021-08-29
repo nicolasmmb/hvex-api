@@ -22,13 +22,14 @@ Para alguns a API pode funcionar como **Magica** 🧙‍♂️, porem para uma E
 - [node.js](https://nodejs.org/en/) - JavaScript runtime. 
 - [Git](https://github.com/) - GitHub para controle de versões.
 - [Docker](https://www.docker.com/) - plataforma de virtualização de nível de sistema operacional.
+
 <p align="center">
-<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VSCode"/>&nbsp;&nbsp; 
-<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express"/>&nbsp;&nbsp; 
-<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB"/>&nbsp;&nbsp;
-<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="NodeJS"/>&nbsp;&nbsp;
-<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"/>&nbsp;&nbsp;
-<img height=63" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker"/>&nbsp;&nbsp;
+<img height=64" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VSCode"/>&nbsp;&nbsp; 
+<img height=64" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="Express"/>&nbsp;&nbsp; 
+<img height=64" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB"/>&nbsp;&nbsp;
+<img height=64" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="NodeJS"/>&nbsp;&nbsp;
+<img height=64" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git"/>&nbsp;&nbsp;
+<img height=64" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker"/>&nbsp;&nbsp;
 </p>
 
 ----
@@ -125,7 +126,7 @@ Link: ***vscode:extension/rangav.vscode-thunder-client*** ,  e aceite o redireci
 ## Passo 6:
 ### Acessando o Projeto
 > :pushpin: Certifique os passos anteriores fom executados corretamente.
-> - Localize o diretorio clonado anteriormente.
+> - Localize o diretório clonado anteriormente.
 > - No console aberto com o caminho de execução referente ao diretório clonado. Exemplo no Windows: ***C:\Users\username\Desktop\hvex-api***
 > - Copie e cole o comando abaixo e execute:
 >```shell 
@@ -206,8 +207,6 @@ Link: ***vscode:extension/rangav.vscode-thunder-client*** ,  e aceite o redireci
 
 ----
 ----
-
-  
 
 # Rotas da API:
 ## Rota da Documentação da API:

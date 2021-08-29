@@ -7,6 +7,21 @@ const cors = require('cors');
 const app = express();
 
 
+
+
+
+// App Config
+
+app.use(express.json());
+app.use(routes);
+app.use((req, res, next) => {
+    app.use(cors());
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE,PATCH');
+    next();
+});
+
+
 // Connect to MongoDB
 mongoose.connect(env.environment.mongoDB.devConnection,
     {
@@ -21,19 +36,17 @@ mongoose.connect(env.environment.mongoDB.devConnection,
         app.emit('connected-on-mongo');
     })
     .catch(err => {
-        console.log(err);
+        console.log('===========================================');
+        console.log('=            MongoDB not Connected        =');
+        console.log('===========================================');
+        console.log('=       The server will only start        =');
+        console.log('=          if Mongo is connected          =');
+        console.log('===========================================');
+        //console.log(err);
         app.emit('error-on-mongo');
     });
 
-// App Config
-app.use(express.json());
-app.use(routes);
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-    app.use(cors());
-    next();
-});
+
 
 // Swagger
 app.use("/documentation",
