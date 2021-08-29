@@ -14,15 +14,14 @@ const app = express();
 
 app.use(express.json());
 app.use(routes);
-;
-app.use((req, res, next) => {
-    // res.header('Access-Control-Allow-Origin', '*');
-    // res.header("Access-Control-Allow-Methods", '*');
-    // res.header("Access-Control-Allow-Headers", '*');
-    app.use(cors())
-    app.options('*', cors());
-    next();
-});
+app.use(cors())
+app.options('*', cors());
+//app.use((req, res, next) => {
+//    res.header('Access-Control-Allow-Origin', '*');
+//    res.header("Access-Control-Allow-Methods", '*');
+//    res.header("Access-Control-Allow-Headers", '*');
+//    next();
+//});
 
 
 // Connect to MongoDB
