@@ -24,7 +24,8 @@ const userSchema = new mongoose.Schema({
     lastAccessDateISO8601: {
         type: Date,
         default: null
-    }
+    },
+
 });
 
 const UserModel = mongoose.model('USERS_DATAS', userSchema);
